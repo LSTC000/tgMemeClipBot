@@ -13,12 +13,14 @@ class TagsInfo(BaseModel):
                 server_default=sql.text('nextval(\'tags_info_id_seq\')'))
     # Tag name.
     tag_name = Column(VARCHAR(64), nullable=False)
-    # Videos for tag.
+    # Count viewers.
+    viewers = Column(Integer, nullable=False)
+    # Count videos.
     videos = Column(Integer, nullable=False)
-    # Photo for tag.
-    photo = Column(Integer, nullable=False)
-    # Only text for tag.
-    only_text = Column(Integer, nullable=False)
+    # Count photos.
+    photos = Column(Integer, nullable=False)
+    # Count descriptions.
+    descriptions = Column(Integer, nullable=False)
     # Likes for tag.
     likes = Column(Integer, nullable=False)
     # Dislikes for tag.
