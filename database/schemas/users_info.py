@@ -2,7 +2,7 @@ import datetime
 
 from database.database_setup import BaseModel
 
-from sqlalchemy import Column, BigInteger, Integer, DateTime, sql, func
+from sqlalchemy import Column, BigInteger, VARCHAR, Integer, DateTime, sql, func
 
 
 class UsersInfo(BaseModel):
@@ -13,6 +13,8 @@ class UsersInfo(BaseModel):
                 server_default=sql.text('nextval(\'users_info_id_seq\')'))
     # Telegram user id.
     user_id = Column(BigInteger, nullable=False)
+    # Telegram user name.
+    user_name = Column(VARCHAR(128), nullable=True)
     # Viewed user memes.
     viewed_memes = Column(Integer, nullable=False)
     # Posted user memes.
