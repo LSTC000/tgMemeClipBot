@@ -23,7 +23,7 @@ class UsersInfo(BaseModel):
     own_dislikes = Column(Integer, nullable=False)
     # Likes that the user has put.
     other_likes = Column(Integer, nullable=False)
-    # DisLikes that the user has put.
+    # Dislikes that the user has put.
     other_dislikes = Column(Integer, nullable=False)
     # Number of approved complaints sent by the user.
     own_confirm_complaint = Column(Integer, nullable=False)
